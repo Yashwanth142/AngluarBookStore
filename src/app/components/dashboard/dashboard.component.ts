@@ -24,4 +24,5 @@ export class DashboardComponent {
   Home() {
     this.route.navigateByUrl("/home");
   }
+  
 }
