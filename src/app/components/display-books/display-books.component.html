@@ -1,0 +1,50 @@
+<div class="display">
+    <div class="header">
+        <div>
+            <span class="book-count">
+                <h3>Books</h3>
+                <h6>({{AllBooks?.length}}items)</h6>
+            </span>
+        </div>
+        <div>
+            <select class="sort">
+                <option>Sort by relevance</option>
+                <option value="lowtohigh">Price : Low To High</option>
+                <option value="hightolow">Price : High To Low</option>
+                <option>Newest Arrivals</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="allBooks">
+        <div class="bookData">
+            <mat-card class="book-card" *ngFor="let book of  AllBooks">
+                <div class="book-img">
+                    <img mat-card-image src="../../../assets/book_imgs/Image 11@2x.png" alt="">
+                </div>
+                <div>
+                    <mat-card-title class="bookTitle">
+                        <span>{{book.bookName}}</span>
+                    </mat-card-title>
+                    <mat-card-content class="details">
+                        <span class="author">{{book.author}}</span>
+                        <div class="rating-div">
+                            <span class="rating">4.5</span>
+                            <span>
+                                <h6>(20)</h6>
+                            </span>
+                        </div>
+                        <h1>Rs.{{book.discountPrice}}</h1>
+                    </mat-card-content>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+<footer class="page-div">
+    <div class="page">
+        <mat-paginator [length]="AllBooks.length" pageSize=4 (page)="getPaginatorData($event)" [pageSizeOptions]="[4, 6, 8]" showFirstLastButtons="false">
+        </mat-paginator>
+    </div>
+</footer>

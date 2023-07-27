@@ -43,7 +43,6 @@ export class LoginComponent {
 
   signupBgColor() {
     this.bgColor = !this.bgColor
-    console.log(this.bgColor);
   }
 
   togglePasswordVisibility(): void {
@@ -68,6 +67,7 @@ export class LoginComponent {
         console.log("user");
         this.userService.signupService(reqdata).subscribe((result: any) => {
           console.log(result);
+          this.route.navigateByUrl("/login")
           this.snackBar.open('User Account created Successfully!', 'ok', {
             duration: 2000
           });
@@ -76,6 +76,7 @@ export class LoginComponent {
         console.log("admin");
         this.adminService.Adminsignup(reqdata).subscribe((result: any) => {
           console.log(result);
+          this.route.navigateByUrl("/login")
           this.snackBar.open('Admin Account created Successfully!', 'ok', {
             duration: 2000
           });
@@ -104,7 +105,7 @@ export class LoginComponent {
           });
           console.log(result.result);
           localStorage.setItem('token', result.result.accessToken)
-          //this.route.navigateByUrl('/home');
+          this.route.navigateByUrl('/home');
         })
       } else {
         console.log("admin");

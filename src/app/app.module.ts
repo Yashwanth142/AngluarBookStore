@@ -27,11 +27,15 @@ import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { GetallbooksComponent } from './components/getallbooks/getallbooks.component';
+import { DisplayBooksComponent } from './components/display-books/display-books.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    GetallbooksComponent,
+    DisplayBooksComponent
   ],
   imports: [
     BrowserModule,

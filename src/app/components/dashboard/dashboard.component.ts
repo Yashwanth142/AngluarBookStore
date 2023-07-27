@@ -16,13 +16,8 @@ export class DashboardComponent {
   }
 
   logOut() {
-    console.log("log");
-    
+    localStorage.removeItem('token');
     this.route.navigateByUrl("/login")
   }
 
-  Home() {
-    this.route.navigateByUrl("/home");
-  }
-  
 }
