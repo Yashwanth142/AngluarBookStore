@@ -18,8 +18,7 @@ export class GetallbooksComponent {
   getbooks(){
     this.bookService.getAllBooksData().subscribe((res:any)=>
     {
-      console.log('get all books');
-      console.log("all Books",res.result);
+      //console.log("get all Books",res.result);
      this.getAllBooks=res.result;
     })
   }

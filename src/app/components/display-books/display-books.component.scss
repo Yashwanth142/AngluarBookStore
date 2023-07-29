@@ -1,5 +1,32 @@
 .display {
     margin-left: 8%;
+    overflow-x: hidden;
+}
+.button-2 {
+    width: 120px;
+    height: 37px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    background: #333333 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    color: white;
+    border: none;
+    font-size: 15px;
+    line-height: 18px;
+    font-variant: normal;
+    font-style: normal;
+    font-family: Lato;
+    font-weight: medium;
+    
+}
+
+.button-2 img {
+    width: 15px;
+    height: 14px;
 }
 
 .header {
@@ -55,8 +82,8 @@ option {
 
 .book-card {
     margin: 12px;
-    min-height: 345px;
-    width: 348px;
+    min-height: 305px;
+    width: 308px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #E2E2E2;
     border-radius: 3px;
@@ -93,6 +120,11 @@ img {
     display: flex;
     flex-direction: column;
     gap: 6px;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
 }
 
 .author {
@@ -219,12 +251,9 @@ h5 {
         width: 320px;
     }
 
-    .allBooks,
-    .bookData {
+    .allBooks,.bookData {
         margin-left: 0;
     }
-
-
 
     h1 {
         font-size: 16px;

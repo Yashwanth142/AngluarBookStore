@@ -18,8 +18,9 @@
 
     <div class="allBooks">
         <div class="bookData">
-            <mat-card class="book-card" *ngFor="let book of  AllBooks">
-                <div class="book-img">
+            <mat-card class="book-card" *ngFor="let book of  AllBooks | paginate: { itemsPerPage: 6, currentPage: page }" 
+            >
+                <div class="book-img" (click)="viewBookDetails(book)">
                     <img mat-card-image src="../../../assets/book_imgs/Image 11@2x.png" alt="">
                 </div>
                 <div>
@@ -35,6 +36,11 @@
                             </span>
                         </div>
                         <h1>Rs.{{book.discountPrice}}</h1>
+                        <div class="btns">
+                            <button mat-flat-button (click)="AddToCart(book._id)" style="background: #A03037;color: #ffff;width: 120px;">Add To Bag </button>
+                            
+                            <button mat-flat-button (click)="AddToWhishlist(book._id)" style="background: black;color: #ffff;width: 120px;">wishlist </button>
+                        </div>
                     </mat-card-content>
                 </div>
             </mat-card>
@@ -44,7 +50,7 @@
 
 <footer class="page-div">
     <div class="page">
-        <mat-paginator [length]="AllBooks.length" pageSize=4 (page)="getPaginatorData($event)" [pageSizeOptions]="[4, 6, 8]" showFirstLastButtons="false">
-        </mat-paginator>
+        <pagination-controls (pageChange)="page = $event">
+        </pagination-controls>
     </div>
 </footer>

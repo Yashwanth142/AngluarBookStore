@@ -15,9 +15,9 @@
         </div>
 
         <div>
-          <div class="right">
-            <button mat-icon-button matTooltip="account" [matMenuTriggerFor]="menu" class="top-icons">
-                <mat-icon class="icons" >person_outline</mat-icon>
+            <div class="right">
+                <button mat-icon-button matTooltip="account" [matMenuTriggerFor]="menu" class="top-icons">
+                    <mat-icon class="icons">person_outline</mat-icon>
                 </button>
                 <mat-menu #menu="matMenu">
                     <div class="userName">Hello Poonam,</div>
@@ -31,16 +31,14 @@
                     </div>
                 </mat-menu>
                 <button mat-icon-button matTooltip="Cart" class="top-icons">
-                    <mat-icon class="icons"  [matBadge]="cartitemNo">shopping_cart</mat-icon>
+                    <mat-icon class="icons" [matBadge]="cartitemNo">shopping_cart</mat-icon>
                 </button>
-               
             </div>
         </div>
-
     </div>
 </div>
 
 <div>
     <router-outlet></router-outlet>
-   
+
 </div>

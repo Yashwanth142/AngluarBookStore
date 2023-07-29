@@ -1,0 +1,94 @@
+<div class="display">
+    <div class="return">
+        <span class="home" (click)="Home()">Home</span>
+        <span class="bookNo">/Book(01)</span>
+    </div>
+    <div class="book-details">
+        <div class="book-imgs">
+            <div class="book-cover">
+                <div class="book-front">
+                    <img class="cover-img" src="../../../assets/book_imgs/Image 1.png">
+                </div>
+                <div class="book-back">
+                    <img class="cover-img" src="../../../assets/book_imgs/Image 46.png">
+                </div>
+            </div>
+            <div class="img-btns">
+                <div class="img-div">
+                    <img class="main-img" src="../../../assets/book_imgs/Image 11@2x.png">
+                </div>
+                <div class="btns">
+                    <button mat-flat-button (click)="AddToCart()" style="background: #A03037;color: #ffff;width: 140px;">Add To Bag </button>
+                    
+                    <button mat-flat-button (click)="AddToWhishlist()" style="background: black;color: #ffff;width: 140px;">wishlist </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-info">
+            <div class="info">
+                <span class="book-title">{{bookData.bookName}}</span>
+                <span class="book-author">{{bookData.author}}</span>
+            </div>
+            <div class="ratingblock">
+                <div class="rating-div">
+                    <span class="rating">4.5</span>
+                    <span><img class="star-img" src="../../../assets/star_18dp.svg"></span>
+                </div>
+                <span>
+                    <h6>(20)</h6>
+                </span>
+            </div>
+            <div class="price">
+                <h1>Rs.{{bookData.price}}</h1>
+            </div>
+
+            <mat-divider class="divider"></mat-divider>
+
+            <div class="description-div">
+                <span class="description-title">Book Detail</span>
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                </div>
+            </div>
+
+            <mat-divider class="divider"></mat-divider>
+
+            <div class="Feedback-div">
+                <span class="Feedback">Customer Feedback</span>
+                <div class="review-Rating">
+                    <span class="Overall-rating">Overall Rating</span>
+                    <div class="starRating">
+                        <img class="rate-img" src="../../../assets/star_FILL0_wght400_GRAD0_opsz48.svg">
+                        <img class="rate-img" src="../../../assets/star_FILL0_wght400_GRAD0_opsz48.svg">
+                        <img class="rate-img" src="../../../assets/star_FILL0_wght400_GRAD0_opsz48.svg">
+                        <img class="rate-img" src="../../../assets/star_FILL0_wght400_GRAD0_opsz48.svg">
+                        <img class="rate-img" src="../../../assets/star_FILL0_wght400_GRAD0_opsz48.svg">
+                    </div>
+                    <input class="review-input" placeholder="Write your review..">
+                    <div class="reviewBtn-div">
+                        <button class="reviewBtn" mat-flat-button color="primary">Submit</button>
+                    </div>
+                    
+                </div>
+                <div class="display-comments">
+                    <mat-card class="comment-card">
+                        <div class="comments" *ngFor="let comment of commentdata">
+                            <mat-card-title>{{comment.user_id.fullName}}</mat-card-title>
+                        <mat-card-content>
+                            <div>
+                                {{comment.comment}}
+                            </div>
+                        </mat-card-content>
+                        </div>
+                    </mat-card>
+                    
+                </div>
+            </div>
+        </div>
+    </div>

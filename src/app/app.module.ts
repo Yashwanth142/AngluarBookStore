@@ -29,13 +29,16 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GetallbooksComponent } from './components/getallbooks/getallbooks.component';
 import { DisplayBooksComponent } from './components/display-books/display-books.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { ViewBooksComponent } from './components/view-books/view-books.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
     GetallbooksComponent,
-    DisplayBooksComponent
+    DisplayBooksComponent,
+    ViewBooksComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,7 @@ import { DisplayBooksComponent } from './components/display-books/display-books.
     MatCardModule,MatButtonModule,MatInputModule,MatTabsModule,MatRadioModule,MatMenuModule,
     MatSnackBarModule,MatIconModule,MatDividerModule,MatExpansionModule,MatBadgeModule,
     MatSelectModule,MatSlideToggleModule,MatTableModule,MatDialogModule,
-    MatTooltipModule,MatPaginatorModule
+    MatTooltipModule,MatPaginatorModule,MatPaginatorModule,NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
