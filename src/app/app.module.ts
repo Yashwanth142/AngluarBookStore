@@ -31,6 +31,7 @@ import { GetallbooksComponent } from './components/getallbooks/getallbooks.compo
 import { DisplayBooksComponent } from './components/display-books/display-books.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ViewBooksComponent } from './components/view-books/view-books.component';
+import { CartComponent } from './components/cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { ViewBooksComponent } from './components/view-books/view-books.component
     DashboardComponent,
     GetallbooksComponent,
     DisplayBooksComponent,
-    ViewBooksComponent
+    ViewBooksComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

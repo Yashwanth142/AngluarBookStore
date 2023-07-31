@@ -1,0 +1,354 @@
+.display {
+    margin: 2%;
+    margin-right: 3%;
+    margin-left: 10%;
+}
+
+.return {
+    padding: 1%;
+}
+
+.home {
+    letter-spacing: 0px;
+    color: #9D9D9D;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.mypage {
+    letter-spacing: 0px;
+    color: #0A0102;
+    font-weight: 600;
+}
+
+.card-out {
+    display: flex;
+    margin-right: 10%;
+}
+
+.cards {
+    width: 70%;
+    margin-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.bookTitle {
+    margin-top: 10px;
+    margin-left: 16px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Address,
+.Order,
+.bookDetails {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DCDCDC;
+    border-radius: 1px;
+    opacity: 1;
+}
+
+.exp-panel-closed {
+    min-height: 60px;
+    display: flex;
+}
+
+.exp-panel {
+    width: 100%;
+}
+
+.exp-panel-header {
+    min-height: 60px;
+}
+
+.book-card {
+    display: flex;
+    gap: 12px;
+    padding: 2%;
+    padding-left: 4%;
+}
+
+.book-card-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.book-info {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 50%;
+}
+
+.books-Qty {
+    margin-left: 16px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.Qty-btn {
+    width: 38px;
+    height: 38px;
+    color: #373434;
+    border-radius: 50%;
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    border: 1px solid #DBDBDB;
+    opacity: 1;
+}
+
+.Qty {
+    width: 66px;
+    height: 38px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DBDBDB;
+    border-radius: 2px;
+    opacity: 1;
+}
+
+.remove {
+    letter-spacing: 0px;
+    color: #0A0102;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.order-btn {
+    justify-content: flex-end;
+}
+
+.cart-Address {
+    width: 275px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DCDCDC;
+    border-radius: 1px;
+    opacity: 1;
+}
+
+.placeorder {
+    width: 151px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+    background: #3371B5 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    opacity: 1;
+}
+
+.order-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.customer-title {
+    width: 139px;
+    height: 24px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    font: normal normal medium 18px/24px Roboto;
+    letter-spacing: 0px;
+    color: #333232;
+    opacity: 1;
+}
+
+.new-address {
+    width: 150px;
+    height: 35px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #A03037;
+    opacity: 1;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #A03037;
+    border-radius: 2px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-details {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-div1 {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+}
+
+.input {
+    width: 251px;
+    height: 45px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DCDCDC;
+    opacity: 1;
+}
+
+.input-sec {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-div {
+    display: flex;
+    gap: 8%;
+}
+
+.radio-btn {
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: #0A0102;
+    opacity: 1;
+}
+
+.Address-input-div {
+    display: flex;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #0A0102;
+    opacity: 1;
+    flex-direction: column;
+}
+
+.Address-input {
+    width: 512px;
+    height: 82px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border: 1px solid #DCDCDC;
+    border-radius: 2px;
+    opacity: 1;
+}
+
+.continue-div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.continue-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 35px;
+    background: #3371B5 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.order-card {
+    box-shadow: none;
+}
+
+.price-Qty {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.total {
+    margin: 2%;
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 1150px) {
+    img {
+        width: 40%;
+        height: 80%;
+    }
+
+    .cards {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+
+    .card-out {
+        margin-right: 0;
+    }
+
+    .cards {
+        width: 98%;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+
+    .display{
+        margin: 3%;
+    }
+
+    .cart-Address{
+        width: 140px;
+    }
+
+    .Qty-btn {
+        width: 24px;
+        height: 24px;
+    }
+
+    .myCart, .bookTitle{
+        font-size: 16px;
+    }
+
+    .author{
+        font-size: 12px;
+    }
+
+    h1{
+        font-size: 16px;
+    }
+
+    .books-Qty{
+        margin: 2px;
+    }
+
+    .input-div1{
+        flex-direction: column;
+    }
+
+    .Address-input{
+        width: auto;
+    }
+
+    .continue-div{
+        justify-content: center;
+    }
+}
