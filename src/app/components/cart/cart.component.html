@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <mat-card-actions class="order-btn" *ngIf="!hide">
-                        <span class="placeorder" (click)="placeOrder()">Place Order</span>
+                        <span class="placeorder">Place Order</span>
                     </mat-card-actions>
                 </mat-card>
             </div>
@@ -60,8 +60,7 @@
                                 <div class="input-div1">
                                     <div class="input-sec">
                                         <mat-label>Full Name</mat-label>
-                                        <input matInput class="input" type="text" name="fullname" [(ngModel)]="name"
-                                            required>
+                                        <input matInput class="input" type="text" name="fullname" [(ngModel)]="name" required>
                                     </div>
 
                                     <div class="input-sec">
@@ -92,7 +91,7 @@
                                     <div aria-labelledby="addressType" class="radio-div">
                                         <mat-radio-button class="radio-btn" value="1" (change)="radioout1()">Home
                                         </mat-radio-button>
-                                        <mat-radio-button class="radio-btn" value="2" (change)="radioout1()">Work
+                                        <mat-radio-button class="radio-btn" value="2" (change)="radioout2()">Work
                                         </mat-radio-button>
                                         <mat-radio-button class="radio-btn" value="3">other
                                         </mat-radio-button>

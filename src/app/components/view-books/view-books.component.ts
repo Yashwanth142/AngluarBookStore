@@ -24,7 +24,6 @@ export class ViewBooksComponent {
 
   ngOnInit(): void {
     this.getBookInfo()
-    
   }
 
   Home() {

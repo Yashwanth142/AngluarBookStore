@@ -43,7 +43,6 @@ export class CartComponent {
       this.allCartBooks = result.result;
       this.cartitemNo=this.allCartBooks.length
       this.dataService.sendCartNo(this.cartitemNo);
-      console.log(result);
       console.log("cart", this.allCartBooks);
       this.totalAmount=0;
       this.cartTotal();
@@ -81,16 +80,14 @@ export class CartComponent {
   cartTotal() {
     this.allCartBooks.forEach((element: any) => {
       this.totalAmount = (element.product_id.price * element.quantityToBuy) + this.totalAmount;
-      //this.totalAmount+=parseInt(element.product_id.price)*parseInt(element.quantityToBuy);
     });
-    console.log("total", this.totalAmount);
+    //console.log("total", this.totalAmount);
   }
 
   decrease(ID: any, bookQty: any) {
     bookQty--;
     this.bookCount = bookQty;
     console.log(this.bookCount);
-
     this.updateCartQty(ID, this.bookCount)
   }
 
@@ -100,17 +97,11 @@ export class CartComponent {
     console.log(this.bookCount);
     this.updateCartQty(ID, this.bookCount)
   }
-
-  placeOrder() {
-    this.hide = !this.hide;
-    this.step = 1;
-    console.log(this.hide);
-  }
-
   radioout1() {
     this.addressType = "Office";
   }
   radioout2() {
     this.addressType = "Home";
   }
+
 }

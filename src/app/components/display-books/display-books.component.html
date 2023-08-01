@@ -18,7 +18,7 @@
 
     <div class="allBooks">
         <div class="bookData">
-            <mat-card class="book-card" *ngFor="let book of  AllBooks | paginate: { itemsPerPage: 6, currentPage: page }" 
+            <mat-card class="book-card" *ngFor="let book of  AllBooks | searchBook:Searchbookdetails | paginate: { itemsPerPage: 6, currentPage: page }" 
             >
                 <div class="book-img" (click)="viewBookDetails(book)">
                     <img mat-card-image src="../../../assets/book_imgs/Image 11@2x.png" alt="">
@@ -35,12 +35,12 @@
                                 <h6>(20)</h6>
                             </span>
                         </div>
-                        <h1>Rs.{{book.discountPrice}}</h1>
-                        <div class="btns">
+                        <h1>Rs.{{book.price}}</h1>
+                        <!-- <div class="btns">
                             <button mat-flat-button (click)="AddToCart(book._id)" style="background: #A03037;color: #ffff;width: 120px;">Add To Bag </button>
                             
                             <button mat-flat-button (click)="AddToWhishlist(book._id)" style="background: black;color: #ffff;width: 120px;">wishlist </button>
-                        </div>
+                        </div> -->
                     </mat-card-content>
                 </div>
             </mat-card>

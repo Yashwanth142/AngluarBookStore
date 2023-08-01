@@ -12,6 +12,9 @@ export class DataService {
   private cartinfoNum = new BehaviorSubject([]);
   cartMessage = this.cartinfoNum.asObservable();
 
+  private Searchmessage = new BehaviorSubject([]);
+  currentSearchmessage = this.Searchmessage.asObservable();
+
   constructor() { }
 
   sendData(message: any) {
@@ -20,5 +23,9 @@ export class DataService {
 
   sendCartNo(message: any) {
     this.cartinfoNum.next(message)
+  }
+
+  sendSearchdata(message: any) {
+    this.Searchmessage.next(message)
   }
 }

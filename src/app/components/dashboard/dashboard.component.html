@@ -10,7 +10,7 @@
                 <button mat-icon-button matTooltip="search" class="top-icons" id="searchicon">
                     <mat-icon>search</mat-icon>
                 </button>
-                <input class="searchtext" type="text" placeholder="Search">
+                <input class="searchtext" type="text" placeholder="Search" (keyup)="SearchBooks($event)">
             </div>
         </div>
 
@@ -24,7 +24,7 @@
                     <div class="Menu">
                         <button class="menu-btns" mat-menu-item>Profile</button>
                         <button class="menu-btns" mat-menu-item>My Orders</button>
-                        <button class="menu-btns" mat-menu-item>My Wishlist</button>
+                        <button class="menu-btns" mat-menu-item routerLink="/home/wishlist">My Wishlist</button>
                         <button class="Logout" mat-menu-item (click)="logOut()">
                             <span class="logout-div">Logout</span>
                         </button>

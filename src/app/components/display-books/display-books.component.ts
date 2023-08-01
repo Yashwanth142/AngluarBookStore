@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { PageEvent } from '@angular/material/paginator';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cartService/cart.service';
@@ -15,7 +14,7 @@ export class DisplayBooksComponent {
   @Input() AllBooks: any=[];
   @Output() refresh = new EventEmitter();
   displayBooks:any=[]
-
+  Searchbookdetails:any
   page : any
   lowValue: number = 0;
   highValue: number = 20;
@@ -24,14 +23,13 @@ export class DisplayBooksComponent {
     private snackBar:MatSnackBar,private wishlist:WishlistService) { }
 
   ngOnInit(): void {
-  
+  this.booksearch()
   }
 
-  getPaginatorData(event: PageEvent): PageEvent {
-    console.log("page");
-    this.lowValue = event.pageIndex * event.pageSize;
-    this.highValue = this.lowValue + event.pageSize;
-    return event;
+  booksearch(){
+    this.dataService.currentSearchmessage.subscribe((response)=>{
+      this.Searchbookdetails = response
+    })
   }
 
   viewBookDetails(book: any) {

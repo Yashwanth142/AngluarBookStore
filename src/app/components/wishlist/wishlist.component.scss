@@ -1,0 +1,133 @@
+.display {
+    margin: 3%;
+    margin-left: 9%;
+}
+
+.return {
+    padding: 1%;
+}
+
+.home {
+    letter-spacing: 0px;
+    color: #9D9D9D;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.mypage {
+    letter-spacing: 0px;
+    color: #0A0102;
+    font-weight: 600;
+}
+
+.list {
+    margin: 1%;
+    width: 72%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E4E4E4;
+    opacity: 1;
+}
+
+.card-div {
+    min-height: 50px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border: 1px solid #E4E4E4;
+    border-radius: 1px;
+    opacity: 1;
+}
+
+.card {
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: none;
+}
+
+.list-title {
+    margin: 2%;
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #0A0102;
+}
+
+.book-info {
+    display: flex;
+}
+
+.book-img{
+    margin-left: 10px;
+}
+
+img {
+    width: 45%;
+}
+
+.bookTitle {
+    margin-top: 10px;
+    margin-left: 16px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.author{
+    font: normal normal normal 12px/16px Roboto;
+    letter-spacing: 0px;
+    color: #9D9D9D;
+}
+
+@media only screen and (max-width: 815px){
+    .list{
+        width: 90%;
+    }
+
+    .display{
+        margin-left: 4%;
+    }
+}
+
+@media only screen and (max-width: 550px){
+
+    .display{
+        margin-left: 0;
+    }
+
+    .list{
+        width: 98%;
+    }
+
+    .bookTitle{
+        margin-top: 0;
+        margin-left: 0;
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .book-img {
+        margin-left: 0;
+        width: 115px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .book{
+        width: 90px;
+        height: 90%;
+    }
+
+    .details{
+        padding: 0;
+    }
+
+    .side{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
