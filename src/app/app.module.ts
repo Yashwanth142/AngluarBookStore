@@ -34,6 +34,7 @@ import { ViewBooksComponent } from './components/view-books/view-books.component
 import { CartComponent } from './components/cart/cart.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { SearchBookPipe } from './pipes/search-book.pipe';
+import { OrderComponent } from './components/order/order.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { SearchBookPipe } from './pipes/search-book.pipe';
     ViewBooksComponent,
     CartComponent,
     WishlistComponent,
-    SearchBookPipe
+    SearchBookPipe,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

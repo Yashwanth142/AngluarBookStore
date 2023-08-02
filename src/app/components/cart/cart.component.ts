@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/Userservice/user.service';
 import { CartService } from 'src/app/services/cartService/cart.service';
 import { DataService } from 'src/app/services/datashare/data.service';
+import { OrderService } from 'src/app/services/orderService/order.service';
 
 @Component({
   selector: 'app-cart',
@@ -32,7 +33,7 @@ export class CartComponent {
   address: any
 
   constructor(private cartService: CartService, private userService: UserService, private dataService: DataService,
-    private route: Router, private snackBar: MatSnackBar, private ref: ChangeDetectorRef) { }
+   private orderService:OrderService, private route: Router, private snackBar: MatSnackBar, private ref: ChangeDetectorRef) { }
   ngOnInit(): void {
     this.getcartBook()
     this.cartTotal()
@@ -76,6 +77,32 @@ export class CartComponent {
     })
   }
 
+  updateAddress() {
+    if(this.addressType==="Office"){
+      let reqData = {
+        "addressType": "Office",
+        "fullAddress": this.address,
+        "city": this.city,
+        "state": this.state
+      }
+      this.userService.updateUserDetails(reqData).subscribe((result: any) => {
+        this.show=!this.show
+        console.log(result)
+      });
+    }else if(this.addressType==="Home"){
+      let reqData = {
+        "addressType": "Home",
+        "fullAddress": this.address,
+        "city": this.city,
+        "state": this.state
+      }
+      this.userService.updateUserDetails(reqData).subscribe((result: any) => {
+        this.show=!this.show
+        console.log(result)
+      });
+    }
+  }
+
 
   cartTotal() {
     this.allCartBooks.forEach((element: any) => {
@@ -97,11 +124,48 @@ export class CartComponent {
     console.log(this.bookCount);
     this.updateCartQty(ID, this.bookCount)
   }
+
+  placeorder(){
+    this.hide=!this.hide;
+    this.step=1;
+  }
   radioout1() {
     this.addressType = "Office";
   }
   radioout2() {
     this.addressType = "Home";
   }
+  continue(){
+    this.step=2;
+    this.updateAddress();
+  }
+  Checkout() {
 
+    for (let book of this.allCartBooks) {
+      const Order =
+      {
+        "product_id": book.product_id._id,
+        "product_name": book.product_id.bookName,
+        "product_quantity": book.quantityToBuy,
+        "product_price": book.product_id.discountPrice
+      }
+      this.orderArray.push(Order);
+    }
+    console.log(this.orderArray);
+
+
+    let reqData = {
+      "orders": this.orderArray
+    }
+    console.log(reqData);
+
+    return this.orderService.addOrder(reqData).subscribe((result: any) => {
+      console.log(result);
+      this.orderId = result.result[0]._id;
+      console.log(this.orderId);
+
+      this.dataService.sendData(this.orderId);
+      this.route.navigateByUrl('/home/order');
+    })
+  }
 }

@@ -31,4 +31,15 @@ export class UserService {
     return this.httpService.postService('login', reqdata, false, httpHeadersOption)
   }
 
+  updateUserDetails(reqdata: any) {
+    this.token = localStorage.getItem('token');
+    let httpHeadersOption = {
+      headers: new HttpHeaders({
+        'ContentType': 'application/json',
+        'x-access-token': this.token
+      })
+    }
+    return this.httpService.updateService('edit_user', reqdata, true, httpHeadersOption)
+  }
+
 }

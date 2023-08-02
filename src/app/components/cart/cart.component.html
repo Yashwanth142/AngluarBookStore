@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <mat-card-actions class="order-btn" *ngIf="!hide">
-                        <span class="placeorder">Place Order</span>
+                        <span class="placeorder" (click)="placeorder()">Place Order</span>
                     </mat-card-actions>
                 </mat-card>
             </div>
@@ -98,7 +98,7 @@
                                     </div>
                                 </div>
                                 <div class="continue-div" *ngIf="!show">
-                                    <span class="continue-btn">Continue</span>
+                                    <span class="continue-btn" (click)="continue()">Continue</span>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +135,7 @@
                                 </div>
                                 <div class="total">Total: Rs.{{totalAmount}}</div>
                                 <mat-card-actions class="order-btn">
-                                    <span class="placeorder">CheckOut</span>
+                                    <span class="placeorder" (click)="Checkout()">CheckOut</span>
                                 </mat-card-actions>
                             </mat-card>
                         </div>

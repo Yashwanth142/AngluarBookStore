@@ -1,0 +1,44 @@
+.display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+    margin-top: 8%;
+}
+
+.msg{
+    text-align: center;
+    font: normal normal normal 18px/22px Lato;
+    letter-spacing: 0px;
+    color: #333232;
+    opacity: 1;
+}
+
+.table-div{
+    width: 75%;
+}
+
+.table-header{
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    border: 1px solid #DCDCDC;
+    opacity: 1;
+    display: flex;
+    justify-content:space-around;
+    padding: 2%;
+}
+
+.table-data{
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    border: 1px solid #DCDCDC;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+
+}
+
+.text-info{
+    margin-left: 7%;
+    width: 223px;
+}
