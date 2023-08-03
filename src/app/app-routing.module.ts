@@ -7,6 +7,8 @@ import { ViewBooksComponent } from './components/view-books/view-books.component
 import { CartComponent } from './components/cart/cart.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { OrderComponent } from './components/order/order.component';
+import { AdminDashBoardComponent } from './components/admin-dash-board/admin-dash-board.component';
+import { AdminDisplayBookComponent } from './components/admin-display-book/admin-display-book.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login'},
@@ -18,8 +20,11 @@ const routes: Routes = [
   {path: 'viewBookDetails', component: ViewBooksComponent},
   {path:"cart", component:CartComponent},
   {path:"wishlist", component: WishlistComponent},
-  {path:"order", component: OrderComponent}
-]}
+  {path:"order", component: OrderComponent}, 
+]},
+{path: 'admin', component:AdminDashBoardComponent,
+children: [{ path: 'AllBooks', component: AdminDisplayBookComponent},
+{ path: '', pathMatch: 'full', redirectTo: 'AllBooks'}]}
 ];
 
 @NgModule({

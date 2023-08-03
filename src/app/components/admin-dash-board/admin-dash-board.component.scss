@@ -1,0 +1,157 @@
+.header {
+    width: 100%;
+    height: 8.5%;
+    background: #A03037;
+    display: flex;
+    justify-content: center;
+}
+
+.header-content {
+    width: 80%;
+    height: 100%;
+    //padding-right: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.logo {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+img{
+    height: 28px;
+}
+
+h2 {
+    margin: 5%;
+    font-size: 24px;
+}
+
+.searchbar-top {
+    display: flex;
+    align-items: center;
+}
+
+#searchicon {
+    color: #9D9D9D;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    width: 590px;
+    height: 44px;
+    background: #FCFCFC 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+}
+
+input {
+    width: 100%;
+    font: normal 17px Google Sans, Roboto, Helvetica, Arial, sans-serif;
+    outline: none;
+    border: none;
+    background: #FFFFFF;
+}
+
+// .right {
+//     display: flex;
+//     gap: 44px;
+// }
+
+.icons {
+    font-size: 36px;
+    width: auto;
+    height: auto;
+}
+
+.mat-mdc-menu-content {
+    margin: 10px;
+    padding: 0;
+}
+
+.userName {
+    margin: 15px;
+    display: flex;
+}
+
+.Menu {
+    margin: 15px;
+    width: 200px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.menu-btns {
+    height: 16px;
+    text-align: left;
+    font: normal normal normal 12px/16px Roboto;
+    letter-spacing: 0px;
+    color: #878787;
+    opacity: 1;
+}
+
+.Logout {
+    border: 1px solid #A03037;
+    border-radius: 2px;
+    opacity: 1;
+}
+
+.logout-div {
+    letter-spacing: 0px;
+    color: #A03037;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1350px) {
+
+    .header-content {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .searchbar {
+        width: 450px;
+    }
+}
+@media only screen and (max-width: 1050px){
+    img{
+        height: 24px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    .searchbar {
+        width: 350px;
+        height: 30px;
+    }
+
+    .icons {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+
+    .header-content {
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-left: 8px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .searchbar {
+        width: 150px;
+    }
+}

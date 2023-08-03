@@ -15,6 +15,8 @@ export class DisplayBooksComponent {
   @Output() refresh = new EventEmitter();
   displayBooks:any=[]
   Searchbookdetails:any
+  sortBooks: any;
+
   page : any
   lowValue: number = 0;
   highValue: number = 20;
@@ -38,23 +40,28 @@ export class DisplayBooksComponent {
     this.route.navigateByUrl("/home/viewBookDetails");
   }
 
-  AddToCart(id:any) {
-    console.log("Id: ", id);
-    this.cartServive.cartAddBooks(id).subscribe((result: any) => {
-      this.snackBar.open('Added to the Cart !', 'ok', {
-        duration: 2000
-      });
-    })
+  sort(e: any) {
+    this.sortBooks = e.target.value;
+    console.log("sort", this.sortBooks);
   }
 
-  AddToWhishlist(id:any) {
-    console.log("Id: ", id);
-    this.wishlist.WhishlistAddBooks(id).subscribe((result: any) => {
-      console.log("add to WhishList", result);
-      this.snackBar.open('Added to the WhishList !', 'ok', {
-        duration: 2000
-      });
-    })
-  }
+  // AddToCart(id:any) {
+  //   console.log("Id: ", id);
+  //   this.cartServive.cartAddBooks(id).subscribe((result: any) => {
+  //     this.snackBar.open('Added to the Cart !', 'ok', {
+  //       duration: 2000
+  //     });
+  //   })
+  // }
+
+  // AddToWhishlist(id:any) {
+  //   console.log("Id: ", id);
+  //   this.wishlist.WhishlistAddBooks(id).subscribe((result: any) => {
+  //     console.log("add to WhishList", result);
+  //     this.snackBar.open('Added to the WhishList !', 'ok', {
+  //       duration: 2000
+  //     });
+  //   })
+  // }
 
 }

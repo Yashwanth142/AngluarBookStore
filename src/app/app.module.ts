@@ -35,6 +35,9 @@ import { CartComponent } from './components/cart/cart.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { SearchBookPipe } from './pipes/search-book.pipe';
 import { OrderComponent } from './components/order/order.component';
+import { AdminDashBoardComponent } from './components/admin-dash-board/admin-dash-board.component';
+import { AdminDisplayBookComponent } from './components/admin-display-book/admin-display-book.component';
+import { SortPipe } from './pipes/Sortingpipe/sort.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +49,10 @@ import { OrderComponent } from './components/order/order.component';
     CartComponent,
     WishlistComponent,
     SearchBookPipe,
-    OrderComponent
+    OrderComponent,
+    AdminDashBoardComponent,
+    AdminDisplayBookComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,

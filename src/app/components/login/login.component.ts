@@ -116,7 +116,7 @@ export class LoginComponent {
             duration: 2000
           });
           localStorage.setItem('token', result.result.accessToken)
-          //this.route.navigateByUrl('/AdminDashBoard');
+          this.route.navigateByUrl('/admin');
         })
       }
     }  else {
