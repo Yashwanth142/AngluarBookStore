@@ -1,0 +1,56 @@
+<mat-card class="card">
+    <div class="img-div">
+        
+        <input type="file" #fileInput style="display: none"  (change)="onFileSelected($event)">
+        <img class="book-img" *ngIf="imageUrl" [src]="imageUrl" alt="Selected Image">
+        <img class="book-img" *ngIf="!imageUrl" mat-card-image src="../../../assets/book_imgs/Image 11@2x.png" alt="">
+        <button class="btn" mat-stroked-button color="primary" (click)="uploadFile()"  *ngIf="!show">
+                    <mat-icon>add_a_photo</mat-icon>
+                    <span>Add picture</span>
+        </button>
+    </div>
+    <div class="book-details">{{bookType ?'Update':' Add'}} Book Details
+        <div>
+            <form class="input-details" [formGroup]="bookForm">
+                <mat-form-field class="mat-outline-user" appearance="outline">
+                    <mat-label>Book Name</mat-label>
+                    <input matInput placeholder="name" type="text" formControlName="name" required>
+                    <mat-error>Book Name is required</mat-error>
+                </mat-form-field>
+                <mat-form-field class="mat-outline-user" appearance="outline">
+                    <mat-label>Author</mat-label>
+                    <input matInput placeholder="Author" type="text" formControlName="author" required>
+                    <mat-error>Author name is required</mat-error>
+                </mat-form-field>
+                <mat-form-field class="mat-outline-user" appearance="outline">
+                    <mat-label>description </mat-label>
+                    <input matInput placeholder="description" type="text" formControlName="description">
+                    <mat-error>description is required</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="mat-outline-user" appearance="outline">
+                    <mat-label>Quantity</mat-label>
+                    <input matInput placeholder="quantity" type="text" formControlName="quantity" required>
+                    <mat-error>Quantity is required</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="mat-outline-user" appearance="outline">
+                    <mat-label>Book price</mat-label>
+                    <input matInput placeholder="name" type="text" formControlName="price" required>
+                    <mat-error>price is required</mat-error>
+                </mat-form-field>
+                <mat-form-field class="mat-outline-user" appearance="outline">
+                    <mat-label>Discount Price</mat-label>
+                    <input matInput placeholder="Discount Price" type="text" formControlName="discountPrice" required>
+                    <mat-error>Discount Price is required</mat-error>
+                </mat-form-field>
+            </form>
+            
+            <div class="add-btn">
+                <button mat-raised-button color="primary" (click)="addUpdate()" class="btn"
+                    style=" background: #A03037; cursor: pointer;">
+                    {{bookType ?'Update':'Add'}}</button>
+            </div>
+        </div>
+    </div>
+</mat-card>

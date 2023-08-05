@@ -18,4 +18,9 @@ export class AdminDashBoardComponent {
     //console.log(e.target.value);
     this.dataService.sendSearchdata(e.target.value)
   }
+
+  logOut() {
+    localStorage.removeItem('token');
+    this.route.navigateByUrl("/login")
+  }
 }

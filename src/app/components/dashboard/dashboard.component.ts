@@ -10,7 +10,7 @@ import { CartService } from 'src/app/services/cartService/cart.service';
 })
 export class DashboardComponent {
   cartitemNo: any;
-
+  
   constructor(private route: Router,private dataService:DataService,private cartService:CartService) { }
 
   ngOnInit(): void {

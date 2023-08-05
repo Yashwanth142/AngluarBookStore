@@ -38,6 +38,7 @@ import { OrderComponent } from './components/order/order.component';
 import { AdminDashBoardComponent } from './components/admin-dash-board/admin-dash-board.component';
 import { AdminDisplayBookComponent } from './components/admin-display-book/admin-display-book.component';
 import { SortPipe } from './pipes/Sortingpipe/sort.pipe';
+import { AdminviewBookComponent } from './components/adminview-book/adminview-book.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { SortPipe } from './pipes/Sortingpipe/sort.pipe';
     OrderComponent,
     AdminDashBoardComponent,
     AdminDisplayBookComponent,
-    SortPipe
+    SortPipe,
+    AdminviewBookComponent
   ],
   imports: [
     BrowserModule,

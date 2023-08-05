@@ -29,7 +29,7 @@ export class DisplayBooksComponent {
   }
 
   booksearch(){
-    this.dataService.currentSearchmessage.subscribe((response)=>{
+    this.dataService.currentSearchMessage.subscribe((response)=>{
       this.Searchbookdetails = response
     })
   }

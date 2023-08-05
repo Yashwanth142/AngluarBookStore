@@ -9,11 +9,11 @@ export class DataService {
   private messageSource = new BehaviorSubject([]);
   currentMessage = this.messageSource.asObservable();
 
+  private Searchmessage = new BehaviorSubject([]);
+  currentSearchMessage = this.Searchmessage.asObservable();
+
   private cartinfoNum = new BehaviorSubject([]);
   cartMessage = this.cartinfoNum.asObservable();
-
-  private Searchmessage = new BehaviorSubject([]);
-  currentSearchmessage = this.Searchmessage.asObservable();
 
   constructor() { }
 
@@ -21,11 +21,11 @@ export class DataService {
     this.messageSource.next(message)
   }
 
-  sendCartNo(message: any) {
-    this.cartinfoNum.next(message)
-  }
-
   sendSearchdata(message: any) {
     this.Searchmessage.next(message)
+  }
+
+  sendCartNo(message: any) {
+    this.cartinfoNum.next(message)
   }
 }
