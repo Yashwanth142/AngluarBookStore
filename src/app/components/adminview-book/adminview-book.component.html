@@ -1,10 +1,9 @@
 <mat-card class="card">
     <div class="img-div">
-        
         <input type="file" #fileInput style="display: none"  (change)="onFileSelected($event)">
         <img class="book-img" *ngIf="imageUrl" [src]="imageUrl" alt="Selected Image">
         <img class="book-img" *ngIf="!imageUrl" mat-card-image src="../../../assets/book_imgs/Image 11@2x.png" alt="">
-        <button class="btn" mat-stroked-button color="primary" (click)="uploadFile()"  *ngIf="!show">
+        <button class="btn1" mat-stroked-button color="primary" (click)="uploadFile()"  *ngIf="!show">
                     <mat-icon>add_a_photo</mat-icon>
                     <span>Add picture</span>
         </button>

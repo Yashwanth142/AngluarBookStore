@@ -1,7 +1,7 @@
 .card{
     padding: 10px;
-    width: 850px;
-    height: 650px;
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -9,13 +9,13 @@
 }
 
 img{
-    width: 80%;
+    width: 70%;
     height: 100%;
 }
 
 .book-details{
     margin: 10px;
-    width: 500px;
+    width: 455px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -28,7 +28,7 @@ img{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
 }
 
 .add-btn{
@@ -36,22 +36,43 @@ img{
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    
 }
 
 .btn{
-    width: 150px; height: 48px; font-size: 18px;
+    width: 150px; 
+    height: 48px; 
+    font-size: 18px;
+    margin-right: 17px;
+}
+.btn1{
+    margin-top: 5px;
+    width: 70%;
+}
+.img-div{
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 1025px){
+    .card{
+        width: auto;
+    }
+    .img{
+        width: 70%;
+        height: 90%;
+    }
+    .book-details{
+        width: 46%;
+    }
 }
 
 @media only screen and (max-width: 990px){
     .card{
         width: auto;
     }
-
     .img{
         width: 60%;
         height: 90%;
-
     }
 }
 
@@ -69,10 +90,16 @@ img{
 
     .add-btn{
         justify-content: center;
+        margin-bottom: 30px;
+        margin-left: 30px;
+    }
+    .input-details{
+        justify-content: center;
     }
 
     .btn{
         width: 100px;
         height: 30px;
     }
+  
 }
