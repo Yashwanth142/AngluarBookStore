@@ -62,13 +62,16 @@ img{
         height: 90%;
     }
     .book-details{
-        width: 46%;
+        width: 69%;
+    }
+    .btn{
+    margin-right: 70px;
     }
 }
 
 @media only screen and (max-width: 990px){
     .card{
-        width: auto;
+        width: 380px;
     }
     .img{
         width: 60%;
@@ -77,14 +80,17 @@ img{
 }
 
 @media only screen and (max-width: 750px){
+    .card{
+        width: auto;
+    }
     .img-div{
         display: none;
     }
 }
 
 @media only screen and (max-width: 550px){
-
     .card{
+        width: auto;
         padding: 0;
     }
 

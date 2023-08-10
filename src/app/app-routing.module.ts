@@ -9,23 +9,27 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { OrderComponent } from './components/order/order.component';
 import { AdminDashBoardComponent } from './components/admin-dash-board/admin-dash-board.component';
 import { AdminDisplayBookComponent } from './components/admin-display-book/admin-display-book.component';
+import { AuthenticationGuard } from './services/authentication.guard';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login'},
   {path:'login',component:LoginComponent},
 
-  {path:'home',component:DashboardComponent,
-  children: [{ path: 'AllBooks', component: GetallbooksComponent},
+  {path:'home',component:DashboardComponent,canActivate:[AuthenticationGuard],
+  children: [
+  { path: 'AllBooks', component: GetallbooksComponent},
   { path: '', pathMatch: 'full', redirectTo: 'AllBooks'},
   {path: 'viewBookDetails', component: ViewBooksComponent},
   {path:"cart", component:CartComponent},
   {path:"wishlist", component: WishlistComponent},
   {path:"order", component: OrderComponent}, 
-]},
-{path: 'admin', component:AdminDashBoardComponent,
-children: [{ path: 'AllBooks', component: AdminDisplayBookComponent},
-{ path: '', pathMatch: 'full', redirectTo: 'AllBooks'}]}
-];
+  ]},
+
+  {path: 'admin', component:AdminDashBoardComponent,canActivate:[AuthenticationGuard],
+  children: [
+  { path: 'AllBooks', component: AdminDisplayBookComponent},
+  { path: '', pathMatch: 'full', redirectTo: 'AllBooks'}]}
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -21,8 +21,7 @@ export class DisplayBooksComponent {
   lowValue: number = 0;
   highValue: number = 20;
 
-  constructor(private route: Router,private dataService:DataService,private cartServive:CartService,
-    private snackBar:MatSnackBar,private wishlist:WishlistService) { }
+  constructor(private route: Router,private dataService:DataService) { }
 
   ngOnInit(): void {
   this.booksearch()

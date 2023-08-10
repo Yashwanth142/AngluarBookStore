@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OrderComponent } from './order.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 describe('OrderComponent', () => {
   let component: OrderComponent;
@@ -8,7 +9,8 @@ describe('OrderComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [OrderComponent]
+      declarations: [OrderComponent],
+      imports:[MatDividerModule]
     });
     fixture = TestBed.createComponent(OrderComponent);
     component = fixture.componentInstance;
